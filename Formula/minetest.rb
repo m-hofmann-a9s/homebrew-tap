@@ -79,6 +79,8 @@ class Minetest < Formula
       -DCMAKE_EXE_LINKER_FLAGS='-L#{Formula["freetype"].opt_lib}'
       -DENABLE_GETTEXT=1
       -DCUSTOM_GETTEXT_PATH=#{Formula["gettext"].opt_prefix}
+      -DPostgreSQL_INCLUDE_DIR='#{Formula["postgresql"].opt_prefix}'
+      -DPostgreSQL_LIBRARY='#{Formula["postgresql"].opt_lib}'
     ]
     # Workaround for 'Could NOT find GettextLib (missing: ICONV_LIBRARY)'
     args << "-DICONV_LIBRARY=#{MacOS.sdk_path}/usr/lib/libiconv.tbd" if OS.mac? && MacOS.version >= :big_sur
