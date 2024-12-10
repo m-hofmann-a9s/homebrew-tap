@@ -76,7 +76,7 @@ class Minetest < Formula
       -DBUILD_SERVER=1
       -DENABLE_POSTGRESQL=1
       -DENABLE_FREETYPE=1
-      -DCMAKE_EXE_LINKER_FLAGS='-L#{Formula["freetype"].opt_lib}'
+      -DCMAKE_EXE_LINKER_FLAGS='-L#{Formula["freetype"].opt_lib},-L#{Formula["libpq"].opt_lib}'
       -DENABLE_GETTEXT=1
       -DCUSTOM_GETTEXT_PATH=#{Formula["gettext"].opt_prefix}
       -DPostgreSQL_INCLUDE_DIR='#{Formula["libpq"].opt_prefix}'
