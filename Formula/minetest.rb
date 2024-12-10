@@ -46,6 +46,7 @@ class Minetest < Formula
   depends_on "libvorbis"
   depends_on "luajit"
   depends_on "zstd"
+  depends_on "postgresql"
 
   uses_from_macos "curl"
   uses_from_macos "ncurses"
